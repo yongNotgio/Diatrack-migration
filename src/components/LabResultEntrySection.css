@@ -1,0 +1,219 @@
+.lab-result-entry-section {
+  background-color: var(--white);
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  margin-top: 10px;
+}
+
+.lab-result-entry-section h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.lab-result-entry-section p {
+  color: #a3b7c6;
+  margin-top: 0;
+}
+
+.lab-stepper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f7f9fb;
+  padding: 20px 30px;
+  border-radius: 16px;
+}
+
+.lab-stepper .step {
+  text-align: center;
+  flex: 1;
+}
+
+.lab-stepper .step-number {
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+
+.lab-stepper .step-label {
+  font-weight: 700;
+  color: #333;
+}
+
+.lab-stepper .step.active .step-label {
+  color: #0066ff;
+}
+
+.lab-stepper .divider {
+  flex: 1;
+  height: 2px;
+  background-color: #ccc;
+}
+
+.enter-labs-button,
+.view-labs-button {
+  background: none;
+  color: #007bff;
+  cursor: pointer;
+  border: none;
+  margin-right: 10px;
+}
+
+.lab-step-content {
+  padding: 10px;
+  border-radius: 12px;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--dark-gray-text);
+}
+
+.lab-step-content h3 {
+  font-size: 26px;
+  font-weight: 700;
+  color: black;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+  text-align: left;
+}
+
+.lab-step-content .form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.lab-step-content .form-group {
+  flex: 1 1 calc(33.333% - 20px);
+  box-sizing: border-box;
+}
+
+@media (max-width: 992px) {
+  .lab-step-content .form-group {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 576px) {
+  .lab-step-content .form-group {
+    flex: 1 1 100%;
+  }
+}
+
+.lab-step-content .form-group label {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--dark-gray-text);
+  margin-bottom: 8px;
+}
+
+.lab-step-content .form-group input[type="date"],
+.lab-step-content .form-group input[type="number"],
+.lab-step-content .form-group input[type="text"] {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid var(--medium-gray);
+  border-radius: 8px;
+  font-size: 15px;
+  color: var(--dark-gray-text);
+  background-color: var(--white);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.lab-step-content.review-step h3 {
+  margin-bottom: 15px;
+}
+
+.review-details {
+  background-color: var(--light-gray);
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border: 1px solid var(--medium-gray);
+}
+
+.review-details p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--dark-gray-text);
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 5px;
+  border-bottom: 1px dashed var(--medium-gray);
+}
+
+.review-details p:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.review-details p strong {
+  color: #000;
+  min-width: 180px;
+  flex-shrink: 0;
+}
+
+.final-warning {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.final-warning img{
+  color: #ffc107;
+  width: 20px;
+  height: 20px;
+}
+
+
+.lab-navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid var(--medium-gray);
+}
+
+.lab-navigation-buttons button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.lab-navigation-buttons .previous-step-button {
+  background-color: var(--danger-red);
+  color: var(--white);
+}
+
+.lab-navigation-buttons .previous-step-button:hover {
+  background-color: #d32f2f;
+}
+
+.lab-navigation-buttons .next-step-button {
+  background-color: var(--primary-blue);
+  color: var(--white);
+}
+
+.lab-navigation-buttons .next-step-button:hover {
+  background-color: #0088cc;
+}
