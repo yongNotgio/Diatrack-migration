@@ -1,0 +1,187 @@
+.appointment-mgmt-section {
+  width: min(100%, 980px);
+  margin: 0 auto 24px;
+  background: #fff;
+  border: 1px solid #e8edf2;
+  border-radius: 12px;
+  padding: 20px 22px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  margin-bottom: 24px;
+}
+
+.appointment-mgmt-form-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.appointment-mgmt-form-columns.three-columns {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.appointment-mgmt-warning {
+  color: #d91341;
+  font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.appointment-mgmt-unavailable-dates-banner {
+  background-color: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.appointment-mgmt-unavailable-dates-banner strong,
+.appointment-mgmt-unavailable-dates-banner ul,
+.appointment-mgmt-unavailable-dates-banner li {
+  color: #856404;
+}
+
+.appointment-mgmt-unavailable-dates-banner ul {
+  margin: 5px 0 0 20px;
+  padding: 0;
+}
+
+.appointment-mgmt-unavailable-dates-banner li {
+  font-size: 13px;
+}
+
+.appointment-mgmt-more-dates {
+  font-style: italic;
+}
+
+.appointment-mgmt-availability-section {
+  width: min(100%, 980px);
+  margin: 0 auto 24px;
+  background: #fff;
+  border: 1px solid #e8edf2;
+  border-radius: 12px;
+  padding: 20px 22px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  margin-top: 8px;
+}
+
+.appointment-mgmt-availability-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.appointment-mgmt-availability-header h3 {
+  margin: 0;
+}
+
+.appointment-mgmt-toggle-btn {
+  background-color: #1faaed;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.appointment-mgmt-unavailability-form {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.appointment-mgmt-mark-unavailable-btn {
+  margin-top: 15px;
+  background-color: #d91341;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.appointment-mgmt-unavailable-dates-list h4 {
+  margin-bottom: 10px;
+}
+
+.appointment-mgmt-empty-dates {
+  color: #666;
+  font-style: italic;
+}
+
+.appointment-mgmt-unavailable-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 15px;
+}
+
+.appointment-mgmt-unavailable-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.appointment-mgmt-unavailable-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.appointment-mgmt-unavailable-date {
+  margin: 5px 0;
+  color: #d91341;
+  font-weight: 500;
+}
+
+.appointment-mgmt-unavailable-reason {
+  margin: 5px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.appointment-mgmt-remove-date-btn {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.appointment-mgmt-submit-btn {
+  background-color: #1faaed;
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.appointment-mgmt-submit-btn:hover {
+  background-color: #1790c8;
+}
+
+@media (max-width: 900px) {
+  .appointment-mgmt-form-columns,
+  .appointment-mgmt-form-columns.three-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .appointment-mgmt-section,
+  .appointment-mgmt-availability-section {
+    width: 100%;
+    padding: 16px;
+    border-radius: 10px;
+  }
+}

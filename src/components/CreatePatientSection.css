@@ -1,0 +1,271 @@
+.create-patient-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  max-width: 900px;
+  margin: auto;
+  min-height: 70vh;
+  position: relative;
+}
+
+.create-patient-header {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.create-patient-header h2 {
+  font-size: 2.2rem;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.close-form-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #888;
+  cursor: pointer;
+  padding: 5px;
+  transition: color 0.2s ease;
+}
+
+.close-form-button:hover {
+  color: var(--danger-red);
+}
+
+.progress-indicator {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 15px 0;
+  background-color: #fff;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+  position: relative;
+}
+
+.steps-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  margin: 0;
+}
+
+.progress-line {
+  flex: 1;
+  height: 2px;
+  background-color: var(--step-inactive-color);
+  margin: 0 10px;
+  position: relative;
+  top: 10px;
+  z-index: -1;
+}
+
+.progress-line.completed {
+  background-color: var(--step-active-color);
+  font-weight: bold;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  min-width: 150px;
+  z-index: 2;
+}
+
+.step-number {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.step-name {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: var(--step-text-color);
+  white-space: nowrap;
+  text-align: center;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.step.active .step-name {
+  font-weight: bold;
+  color: var(--step-current-text-color);
+}
+
+.patient-form-content {
+  width: 100%;
+  padding: 10px 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.form-step {
+  width: 100%;
+}
+
+.form-step h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--primary-blue);
+  margin-top: 0;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: end;
+}
+
+.form-row .form-group {
+  margin-bottom: 0;
+}
+
+.form-group.full-width {
+  grid-column: span 3;
+}
+
+.form-group.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.form-group.checkbox-group input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+.form-group.checkbox-group label {
+  margin-bottom: 0;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+.form-navigation-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  border: none;
+  margin-top: 0;
+}
+
+.form-navigation-buttons .cancel-button {
+  background-color: #f44336;
+  color: var(--white);
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.form-navigation-buttons .cancel-button:hover {
+  background-color: #d32f2f;
+}
+
+.form-navigation-buttons .next-step-button,
+.form-navigation-buttons .previous-step-button {
+  background-color: var(--primary-blue);
+  color: var(--white);
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.form-navigation-buttons .next-step-button:hover,
+.form-navigation-buttons .previous-step-button:hover {
+  background-color: #0088cc;
+}
+
+.form-message {
+  margin-top: 10px;
+  padding: 5px 15px;
+  border-radius: 8px;
+  font-weight: 500;
+  color: #333;
+  background-color: #e0f7fa;
+}
+
+@media (max-width: 768px) {
+  .create-patient-section {
+    padding: 20px;
+  }
+
+  .create-patient-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .progress-indicator {
+    width: 95%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .step {
+    flex-basis: 45%;
+    margin-bottom: 20px;
+  }
+
+  .step-number {
+    margin-bottom: 5px;
+  }
+
+  .step-name {
+    position: static;
+    transform: none;
+    min-width: unset;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group.full-width {
+    grid-column: span 1;
+  }
+
+  .form-navigation-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-navigation-buttons button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
