@@ -1,0 +1,201 @@
+/* Global Pagination Styles - Reusable Component */
+.pagination-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 15px;
+    padding: 15px 0;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* Page Information Styling */
+.page-info {
+    color: #666;
+    font-size: 11px;
+    font-weight: 500;
+    order: 2;
+}
+
+.pagination {
+  display: flex;
+  gap: 0px;
+  align-items: center;
+  justify-content: center;
+  order: 1;
+}
+
+/* Pagination Button Base Styles */
+.pagination-btn {
+  padding: 4px 8px;
+  border: 1px solid #e0e0e0;
+  background-color: white;
+  color: #666;
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  text-decoration: none;
+  user-select: none;
+  border-radius: 0;
+}
+
+.page-info{
+  padding-right: 50px;
+}
+
+/* Page Number Button Styles */
+.pagination-btn.page-number {
+  min-width: 28px;
+  padding: 0;
+  font-weight: 500;
+}
+
+/* First page number - rounded left */
+.pagination-btn.page-number:first-of-type {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+/* Previous Button Styles */
+.pagination-btn.prev-btn {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  padding: 4px 10px;
+  font-weight: 500;
+  border-color: none ;
+  border: 1px solid #e0e0e0;
+}
+
+/* Next Button Styles */
+.pagination-btn.next-btn {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  padding: 4px 10px;
+  font-weight: 500;
+}
+
+/* Remove left border from adjacent buttons to avoid double borders */
+.pagination-btn:not(:first-child) {
+  border: 1px solid #0e0e0e;
+  background-color: transparent;
+}
+
+/* Hover State */
+.pagination-btn:hover:not(:disabled):not(.disabled) {
+  background-color: #f5f5f5;
+  z-index: 1;
+  position: relative;
+  border-color: #d0d0d0;
+}
+
+/* Active State */
+.pagination-btn.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+  font-weight: 600;
+  z-index: 2;
+  position: relative;
+}
+
+.pagination-btn.active:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* Disabled State */
+.pagination-btn:disabled,
+.pagination-btn.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: none;
+  color: black;
+  border-color: #e0e0e0;
+}
+
+/* Ellipsis Styling */
+.pagination-ellipsis {
+  padding: 4px 4px;
+  color: #999;
+  font-weight: 500;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  height: 28px;
+  font-size: 11px;
+}
+
+/* Icon Styling */
+.pagination-icon {
+  width: 10px;
+  height: 10px;
+  object-fit: contain;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pagination-container {
+    padding: 15px 0;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .page-info {
+    order: 2;
+    font-size: 12px;
+  }
+  
+  .pagination {
+    gap: 1px;
+    order: 1;
+  }
+  
+  .pagination-btn {
+    padding: 8px 12px;
+    font-size: 13px;
+    min-width: 36px;
+    height: 36px;
+  }
+  
+  .pagination-btn.prev-btn,
+  .pagination-btn.next-btn {
+    padding: 8px 12px;
+  }
+  
+  .pagination-ellipsis {
+    padding: 8px 6px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pagination {
+    gap: 0;
+  }
+  
+  .pagination-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+    min-width: 32px;
+    height: 32px;
+  }
+  
+  .pagination-btn.prev-btn,
+  .pagination-btn.next-btn {
+    padding: 6px 10px;
+  }
+  
+  .pagination-ellipsis {
+    padding: 6px 4px;
+    height: 32px;
+  }
+}
+
