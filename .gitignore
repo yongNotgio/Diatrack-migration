@@ -1,0 +1,21 @@
+
+# Environment variables
+.env
+.env.local
+.env.production
+.env*.local
+
+# Dependencies
+node_modules
+
+# Build output
+dist
+
+# SQL dumps (sensitive database data)
+sql_dump/
+
+# Seed script (contains database seeding logic)
+seed.ts
+
+# Convex
+.convex/
