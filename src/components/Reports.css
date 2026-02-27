@@ -1,0 +1,411 @@
+/* ============================
+   Reports Component Styles
+   Unified styles for Secretary & Doctor Reports
+   ============================ */
+
+/* Reports Section Container */
+.reports-section {
+  background-color: transparent;
+  border-radius: 12px;
+  padding: 20px;
+  grid-column: span 2;
+  margin-top: 0px;
+  position: relative;
+}
+
+.reports-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+/* ============================
+   Reports Widgets Grid
+   ============================ */
+.reports-widgets-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+/* Individual Report Widget Card */
+.report-widget {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  height: 200px;
+  max-height: 200px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 0px;
+  cursor: pointer;
+}
+
+.report-widget:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Report Widget Header */
+.report-widget-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.report-widget-image {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.report-widget h4 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+  flex: 1;
+  line-height: 1.2;
+}
+
+/* View Button */
+.report-widget-view-button {
+  background: none;
+  border: none;
+  color: #1FAAED;
+  font-size: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.report-widget-view-button:hover {
+  transform: translateY(-2px);
+}
+
+/* Report Widget Content (Number + Subtitle) */
+.report-widget-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.report-widget-left {
+  flex-shrink: 0;
+}
+
+.report-number {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+  color: black;
+  line-height: 1;
+}
+
+.report-widget-right {
+  flex: 1;
+  min-width: 0;
+}
+
+.report-subtitle {
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+  line-height: 1.3;
+  word-wrap: break-word;
+}
+
+/* ============================
+   Mini Chart Container (inside widgets)
+   ============================ */
+.report-widget .mini-chart-container {
+  width: 100%;
+  height: 120px;
+  max-height: 120px;
+  flex: 1;
+  border-radius: 8px;
+  background: none;
+  position: relative;
+  overflow: hidden;
+  padding: 5px 0;
+  margin-top: 0px;
+}
+
+.report-widget .mini-chart-container .no-chart-data {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 11px;
+  font-style: italic;
+}
+
+.report-widget .mini-chart-container .no-chart-data p {
+  margin: 0;
+}
+
+/* ============================
+   Reports Content Row (Bar Charts)
+   ============================ */
+.reports-content-row {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+/* Chart Container for Reports */
+.chart-container-reports {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  flex: 1;
+  min-width: 300px;
+  max-width: 590px;
+  width: 585px;
+  height: 350px;
+  max-height: 350px;
+  overflow: visible;
+  padding: 20px 20px 40px 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+.chart-container-reports:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.chart-container-reports h3 {
+  margin: 0 0 20px 0;
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* ============================
+   Report Detail Section (Secretary - detail table views)
+   ============================ */
+.report-detail-section {
+  background-color: transparent;
+  border-radius: 12px;
+  padding: 20px;
+  grid-column: span 2;
+  margin-top: 0px;
+  position: relative;
+}
+
+.report-detail-section .detail-view-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  gap: 10px;
+  position: relative;
+}
+
+.report-detail-section .detail-view-header h2 {
+  font-size: 2.2rem;
+  color: #1FAAED;
+  margin: 0;
+  font-weight: 700;
+  text-align: left;
+}
+
+/* Back Button for Secretary */
+.back-to-list-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 0;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.back-to-list-button:hover {
+  color: #1FAAED;
+}
+
+.back-to-list-button .button-icon.back-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Back Button for Doctor */
+.back-button3 {
+  color: black;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95em;
+  padding: 0px;
+  margin: 0 4px;
+  border-radius: 6px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.back-button3:hover {
+  color: #1FAAED;
+}
+
+.back-button3 .button-icon.back-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* ============================
+   Compliance Status Badges
+   ============================ */
+.compliance-status {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.compliance-status.good {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.compliance-status.warning {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.compliance-status.overdue {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.compliance-status.no-submission {
+  background-color: #e2e3e5;
+  color: #383d41;
+}
+
+/* ============================
+   Flag Button
+   ============================ */
+.flag-button {
+  background: none;
+  border: 1px solid #dc3545;
+  color: #dc3545;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.flag-button:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* ============================
+   Toggle Phase Button (Doctor)
+   ============================ */
+.toggle-phase-button {
+  background: none;
+  border: 1px solid #6c757d;
+  color: #6c757d;
+  padding: 4px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.toggle-phase-button:hover {
+  background-color: #6c757d;
+  color: white;
+}
+
+/* ============================
+   Responsive Adjustments
+   ============================ */
+@media (max-width: 1200px) {
+  .reports-widgets-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .reports-widgets-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .report-widget {
+    height: 200px;
+    max-height: 200px;
+    padding: 12px;
+  }
+
+  .report-number {
+    font-size: 28px;
+  }
+
+  .report-widget h4 {
+    font-size: 14px;
+  }
+
+  .report-subtitle {
+    font-size: 11px;
+  }
+
+  .report-widget .mini-chart-container {
+    height: 100px;
+    max-height: 100px;
+  }
+
+  .reports-content-row {
+    flex-direction: column;
+  }
+
+  .chart-container-reports {
+    min-width: 100%;
+    height: 300px;
+    padding: 15px 15px 35px 15px;
+  }
+
+  .report-detail-section .detail-view-header h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .chart-container-reports {
+    height: 250px;
+    padding: 15px 15px 30px 15px;
+  }
+
+  .chart-container-reports h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+}

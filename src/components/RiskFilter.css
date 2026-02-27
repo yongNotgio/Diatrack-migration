@@ -1,0 +1,269 @@
+/* Risk Filter Component Styles - Single Combined Dropdown Version */
+.risk-filter-container {
+  margin-bottom: 0;
+  position: relative;
+  display: inline-block;
+}
+
+.risk-filter-container-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.risk-filter-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Filter Dropdown Button */
+.filter-dropdown-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background-color: white;
+  border: 2px solid #007bff;
+  border-radius: 6px;
+  color: #007bff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 200px;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.filter-dropdown-button:hover {
+  background-color: #f8f9fa;
+  border-color: #0056b3;
+  color: #0056b3;
+}
+
+.filter-dropdown-button:active {
+  background-color: #e9ecef;
+}
+
+/* Filter Icon */
+.filter-icon {
+  font-size: 12px;
+  color: inherit;
+}
+
+/* Filter Icon Image */
+.filter-icon-img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* Active Filter Badge */
+.active-filter-badge {
+  background-color: #dc3545;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 10px;
+  font-weight: 700;
+  min-width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 4px;
+}
+
+/* Selected Count */
+.selected-count {
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: 4px;
+  opacity: 0.8;
+}
+
+/* Dropdown Arrow */
+.dropdown-arrow {
+  font-size: 10px;
+  transition: transform 0.2s ease;
+}
+
+/* Dropdown Arrow Image */
+.dropdown-arrow-img {
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.dropdown-arrow-img.open {
+  transform: rotate(180deg);
+}
+
+/* Dropdown Menu */
+.filter-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  margin-top: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Scrollbar styling for dropdown */
+.filter-dropdown-menu::-webkit-scrollbar {
+  width: 8px;
+}
+
+.filter-dropdown-menu::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 0 6px 6px 0;
+}
+
+.filter-dropdown-menu::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.filter-dropdown-menu::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Dropdown Items */
+.filter-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid #f8f9fa;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #495057;
+}
+
+.filter-dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.filter-dropdown-item:hover {
+  background-color: #f8f9fa;
+}
+
+.filter-dropdown-item.selected {
+  background-color: #007bff;
+  color: white;
+}
+
+.filter-dropdown-item.selected:hover {
+  background-color: #0056b3;
+}
+
+/* Filter Option Text */
+.filter-option-text {
+  flex: 1;
+}
+
+/* Filter Count */
+.filter-count {
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+/* Risk icons in dropdown */
+.low-risk-icon,
+.moderate-risk-icon,
+.high-risk-icon,
+.ppd-risk-icon {
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+/* When item is selected, maintain icon visibility */
+.filter-dropdown-item.selected .low-risk-icon,
+.filter-dropdown-item.selected .moderate-risk-icon,
+.filter-dropdown-item.selected .high-risk-icon,
+.filter-dropdown-item.selected .ppd-risk-icon {
+  opacity: 1;
+}
+
+/* Status Icon Styling */
+.status-icon {
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+/* Lab Status Filter Button */
+.lab-status-filter {
+  border-color: #17a2b8;
+  color: #17a2b8;
+}
+
+.lab-status-filter:hover {
+  border-color: #138496;
+  color: #138496;
+}
+
+/* Profile Status Filter Button */
+.profile-status-filter {
+  border-color: #6c757d;
+  color: #6c757d;
+}
+
+.profile-status-filter:hover {
+  border-color: #5a6268;
+  color: #5a6268;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .risk-filter-container {
+    margin-bottom: 15px;
+  }
+  
+  .filter-dropdown-button {
+    min-width: 180px;
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+  
+  .filter-dropdown-item {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+  
+  .filter-count,
+  .selected-count {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-dropdown-button {
+    min-width: 160px;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  
+  .filter-dropdown-item {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  
+  .filter-count,
+  .selected-count {
+    font-size: 10px;
+  }
+}
