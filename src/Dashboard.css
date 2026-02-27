@@ -1,0 +1,3141 @@
+/* Fallback if loaded via CSS */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+/* Variables */
+:root {
+--primary-blue: #1FAAED; /* Slightly darker blue */
+--secondary-orange: #ffc107; /* Brighter orange */
+--text-dark: #212529;
+--text-medium: #495057;
+--text-light: #6c757d;
+--background-light: #f8f9fa;
+--background-white: #ffffff;
+--header-bg: #ffffff; /* Header background */
+--header-nav-hover: #e9ecef; /* Light gray for nav hover */
+--border-light: #e9ecef;
+--border-medium: #dee2e6;
+--shadow-light: rgba(0, 0, 0, 0.08); /* More subtle shadow */
+--shadow-medium: rgba(0, 0, 0, 0.15);
+--card-bg: #ffffff;
+--success-color: #28a745;
+--danger-color: #dc3545;
+}
+
+*{
+font-family: 'poppins' !important;
+}
+
+/* Base Styles */
+body {
+font-family: "poppins" !important;
+margin: 0;
+box-sizing: border-box;
+background-color: var(--background-light);
+color: var(--text-dark);
+}
+
+.dashboard-container-header-only3 {
+display: flex;
+flex-direction: column; /* Stack header and content vertically */
+min-height: 100vh;
+
+}
+
+/* Main Header */
+.main-header3 {
+background-color: var(--header-bg);
+padding: 15px 30px;
+box-shadow: 0 2px 8px var(--shadow-light);
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap; /* Allow wrapping on smaller screens */
+gap: 10px; /* Space between main sections of the header */
+}
+
+.header-left3 {
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.header-left3 .app-logo3 {
+height: 40px; /* Smaller logo for header */
+width: auto;
+}
+
+.header-left3 .app-title3 {
+font-size: 1.5em; /* Smaller title */
+font-weight: 700;
+color: var(--text-dark);
+white-space: nowrap; /* Prevent breaking title */
+}
+
+/* Header Navigation */
+.header-nav3 ul {
+list-style: none;
+padding: 0;
+margin: 0;
+display: flex;
+gap: 10px; /* Space between nav items */
+}
+
+.header-nav3 li {
+padding: 10px 20px; /* Adjusted padding */
+cursor: pointer;
+transition: all 0.3s ease;
+font-size: 16px;
+color: var(--primary-blue); /* Blue text color by default */
+background-color: transparent; /* Transparent background */
+border: 1px solid var(--primary-blue); /* Blue border by default */
+border-radius: 25px; /* More rounded pills for menu items */
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: 500;
+}
+
+.header-nav3 li i {
+font-size: 1.1em;
+color: var(--primary-blue); /* Blue icon color */
+margin-right: 8px;
+}
+
+
+.header-nav3 li:hover {
+background-color: var(--primary-blue); /* Solid blue on hover */
+color: var(--white); /* White text on hover */
+box-shadow: 0 4px 10px rgba(0, 170, 255, 0.3); /* Subtle shadow on hover */
+transform: translateY(-2px); /* Slight lift effect */
+}
+
+.header-nav3 li.active3 {
+background-color: var(--primary-blue); /* Solid blue for active state */
+color: var(--white);
+font-weight: 600; /* Bolder text for active state */
+border-color: var(--primary-blue); /* Solid border for active state */
+box-shadow: 0 4px 10px rgba(0, 170, 255, 0.4); /* More prominent shadow for active */
+}
+
+.header-nav3 li.active3 i {
+color: var(--background-white);
+}
+
+/* Header Right Section (Icons, User Profile, Logout) */
+.header-right3 {
+display: flex; /* Make it a flex container */
+align-items: center; /* Align items vertically */
+gap: 15px; /* Space between the icon group, user profile, and logout button */
+}
+
+.header-icons3 {
+display: flex; /* Make icons a flex container */
+gap: 15px; /* Space between individual icons */
+align-items: center; /* Align icons vertically */
+}
+
+.header-icons3 button {
+font-size: 1.3em; /* Adjust icon size as needed */
+color: var(--text-medium);
+cursor: pointer;
+transition: color 0.2s ease;
+background: none;
+border: none;
+}
+
+.header-icons3 button:hover {
+color: var(--primary-blue);
+}
+
+
+.user-profile-header3 {
+display: flex;
+align-items: center;
+gap: 8px;
+padding: 5px 10px;
+border-radius: 8px;
+background-color: var(--background-light); /* Light background for user profile */
+}
+
+.user-profile-header3 .user-avatar3 {
+border-radius: 50%;
+width: 35px; /* Smaller avatar */
+height: 35px;
+object-fit: cover;
+border: 1px solid var(--primary-blue);
+}
+
+.user-info-header3 {
+display: flex;
+flex-direction: column;
+}
+
+.user-profile-header3 .user-name3 {
+font-weight: 600;
+font-size: 0.95em;
+color: var(--text-dark);
+}
+
+.user-profile-header3 .user-role3 {
+font-size: 0.8em;
+color: var(--text-light);
+}
+
+.signout-button-header3 {
+background: none;
+border: 1px solid var(--danger-color);
+color: var(--danger-color);
+padding: 8px 15px;
+border-radius: 8px;
+cursor: pointer;
+font-size: 0.9em;
+display: flex;
+align-items: center;
+gap: 8px;
+transition: background-color 0.3s ease, color 0.3s ease;
+white-space: nowrap; /* Prevent text wrapping */
+}
+
+.signout-button-header3:hover {
+background-color: var(--danger-color);
+color: var(--background-white);
+}
+
+
+/* Content Area - Full Width */
+.content-area-full-width3 {
+flex-grow: 1;
+padding: 20px;
+overflow-y: auto;
+}
+
+.content-area-full-width3 h1 {
+font-size: 2em;
+margin-top: 0;
+margin-bottom: 25px;
+color: var(--text-dark);
+font-weight: 700;
+}
+
+/* Dashboard Header Row - Welcome message and status switch */
+.dashboard-header-row {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 10px;
+}
+
+.dashboard-header-row .welcomeh1 {
+margin: 0;
+}
+
+/* Compact Doctor Status Switch */
+.doctor-status-compact {
+display: flex;
+align-items: center;
+gap: 12px;
+background-color: var(--background-white);
+padding: 10px 16px;
+border-radius: 25px;
+box-shadow: 0 2px 6px var(--shadow-light);
+transition: all 0.3s ease;
+}
+
+.doctor-status-compact:hover {
+box-shadow: 0 3px 10px var(--shadow-medium);
+}
+
+.status-text-compact {
+font-size: 0.95em;
+font-weight: 600;
+margin: 0;
+white-space: nowrap;
+}
+
+.status-text-compact.status-in {
+color: var(--success-color);
+}
+
+.status-text-compact.status-out {
+color: var(--danger-color);
+}
+
+/* Compact Toggle Switch */
+.status-switch-compact {
+position: relative;
+display: inline-block;
+width: 44px;
+height: 24px;
+}
+
+.status-switch-compact input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+
+.status-slider-compact {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ccc;
+transition: 0.3s;
+border-radius: 24px;
+}
+
+.status-slider-compact:before {
+position: absolute;
+content: "";
+height: 18px;
+width: 18px;
+left: 3px;
+bottom: 3px;
+background-color: white;
+transition: 0.3s;
+border-radius: 50%;
+}
+
+.status-switch-compact input:checked + .status-slider-compact {
+background-color: var(--success-color);
+}
+
+.status-switch-compact input:focus + .status-slider-compact {
+box-shadow: 0 0 1px var(--success-color);
+}
+
+.status-switch-compact input:checked + .status-slider-compact:before {
+transform: translateX(20px);
+}
+
+/* Hover effect for the compact switch */
+.status-switch-compact:hover .status-slider-compact {
+opacity: 0.9;
+}
+
+
+/* Report Widget Styles */
+.report-widget {
+cursor: pointer;
+}
+.report-widget-view-button{
+background: none;
+border: none;
+color: var(--primary-blue);
+font-size: 12px;
+cursor: pointer;
+}
+
+.report-widget-view-button:hover{
+transform: translateY(-2px);
+}
+
+
+.report-pending-labs:hover {
+box-shadow: 0 4px 20px rgba(255, 193, 7, 0.2);
+}
+
+.chart-container-reports {
+cursor: pointer;
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+flex: 1;
+min-width: 500px;
+max-width: 590px;
+width: 585px;
+height: 350px;
+max-height: 350px;
+overflow: visible;
+padding: 20px 20px 40px 20px;
+background: var(--background-white);
+border-radius: 12px;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+border: 1px solid var(--border-light);
+}
+
+.chart-container-reports:hover {
+transform: translateY(-1px);
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Reports content row layout */
+.reports-content-row {
+display: flex;
+gap: 20px;
+margin-top: 20px;
+flex-wrap: wrap;
+}
+
+.reports-content-row .chart-container-reports {
+flex: 1;
+min-width: 300px;
+}
+
+.reports-content-row .chart-container-reports h3 {
+margin: 0 0 20px 0;
+color: var(--text-dark);
+font-size: 18px;
+font-weight: 600;
+}
+
+/* Responsive design for chart containers */
+@media (max-width: 768px) {
+.reports-content-row {
+flex-direction: column;
+}
+
+.reports-content-row .chart-container-reports {
+min-width: 100%;
+height: 300px;
+padding: 15px 15px 35px 15px;
+}
+}
+
+@media (max-width: 480px) {
+.chart-container-reports {
+height: 250px;
+padding: 15px 15px 30px 15px;
+}
+
+.reports-content-row .chart-container-reports h3 {
+font-size: 16px;
+margin-bottom: 15px;
+}
+}
+
+/* Report Table Styles */
+.report-table-section {
+padding: 20px;
+}
+
+.report-table-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 20px;
+padding-bottom: 15px;
+border-bottom: 2px solid var(--border-light);
+}
+
+.report-table-header h2 {
+margin: 0;
+color: var(--text-dark);
+font-weight: 600;
+}
+
+.patient-name-cell {
+padding: 8px 12px;
+}
+
+.patient-name-container {
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.patient-avatar-table {
+width: 32px;
+height: 32px;
+border-radius: 50%;
+object-fit: cover;
+border: 1px solid var(--border-light);
+}
+
+.patient-name-text {
+font-weight: 500;
+color: var(--text-dark);
+}
+.card3 {
+background-color: var(--card-bg);
+border-radius: 12px;
+box-shadow: 0 4px 15px var(--shadow-light);
+padding: 15px;
+margin-bottom: 10px;
+transition: transform 0.2s ease-in-out;
+}
+
+.card3 h2, .card3 h3 {
+color: var(--text-dark);
+margin-top: 0;
+margin-bottom: 10px;
+font-weight: 600;
+padding-bottom: 10px;
+}
+
+/* Dashboard Grid (Remains the same) */
+.dashboard-grid3 {
+display: grid;
+grid-template-columns: 1fr;
+gap: 15px;
+}
+
+@media (min-width: 992px) {
+.dashboard-grid3 {
+grid-template-columns: 2fr 1fr;
+}
+}
+
+
+
+.search-bar-patients3 {
+position: relative;
+display: flex;
+align-items: center;
+width: 100%;
+max-width: 400px;
+margin-bottom: 20px;
+border: 1px solid var(--border-medium);
+border-radius: 10px;
+height: 45px;
+background-color: var(--background-light);
+}
+
+.search-bar-patients3 input[type="text"] {
+padding: 10px 15px;
+border: none;
+font-size: 1em;
+width: calc(100% - 50px);
+padding-left: 15px;
+border-radius: 10px;
+background: transparent;
+outline: none;
+}
+
+.search-bar-patients3 .search-icon3 {
+position: absolute;
+right: 15px;
+color: var(--text-light);
+cursor: pointer;
+font-size: 1.1em;
+}
+
+.table-responsive3 {
+overflow-x: auto;
+}
+
+
+.patient-list-table3,
+.appointment-list-table3,
+.medication-list-table3, /* Added medication-list-table */
+.patient-table3 {
+width: 100%;
+border-collapse: collapse;
+border-radius: 8px;
+overflow: hidden;
+}
+
+.patient-list-table3 th,
+.appointment-list-table3 th,
+.medication-list-table3 th, /* Added medication-list-table */
+.patient-table3 th {
+padding: 10px 10px;
+text-align: center;
+font-weight: bold;
+font-size: 0.95em;
+color: var(--text-medium);
+}
+
+.patient-list-table3 td,
+.appointment-list-table3 td,
+.medication-list-table3 td, /* Added medication-list-table */
+.patient-table3 td {
+color: var(--text-dark);
+text-align: center;
+font-size: 0.9em;
+padding: 5px 10px;
+}
+
+.patient-list-table3 tr:last-child td,
+.appointment-list-table3 tr:last-child td,
+.medication-list-table3 tr:last-child td { /* Added medication-list-table */
+border-bottom: none;
+}
+
+/* Risk Classification and Phase Pills (Remains the same) */
+.risk-classification3,
+.phase3 {
+border-radius: 20px;
+padding: 6px 14px;
+font-size: 0.9em;
+font-weight: 600;
+text-align: center;
+display: inline-block;
+white-space: nowrap;
+}
+
+.risk-classification3.Low {
+background-color: #d4edda;
+color: #155724;
+}
+
+.risk-classification3.Moderate {
+background-color: #fff3cd;
+color: #85640c;
+}
+
+.risk-classification3.High {
+background-color: #f8d7da;
+color: #721c24;
+}
+
+.phase3.Pre-Operative {
+background-color: #ffc107;
+color: #343a40;
+}
+
+.phase3.Post-Operative {
+background-color: #d1ecf1;
+color: #0c5460;
+}
+
+/* Action Buttons (Remains the same) */
+.action-button3 {
+background: none;
+border: none;
+cursor: pointer;
+font-size: 0.95em;
+padding: 5px 8px;
+margin: 0 4px;
+transition: background-color 0.2s ease, color 0.2s ease;
+border-radius: 6px;
+font-weight: 500;
+}
+
+.action-button3.view-button3 {
+color: var(--primary-blue);
+border: none;
+background: none;
+}
+
+.action-button3.delete-button3 {
+color: var(--danger-color);
+border: none;
+background: none;
+}
+
+.action-button3.view-button3:hover {
+background-color: rgba(0, 123, 255, 0.1);
+}
+
+.action-button3.delete-button3:hover {
+background-color: rgba(220, 53, 69, 0.1);
+}
+
+.back-button3{
+color: black;
+background-color: none;
+background:none;
+border: none;
+cursor: pointer;
+font-size: 0.95em;
+padding: 0px;
+margin: 0 4px;
+border-radius: 6px;
+font-weight: 400;
+margin-bottom: 10px;
+}
+
+/* Risk Score Over Time Chart Section */
+
+
+
+.risk-score-chart-section .chart-header {
+display: flex;
+justify-content: flex-end;
+align-items: center;
+margin-bottom: 15px;
+}
+
+.risk-score-chart-section .time-filter-buttons {
+display: flex;
+gap: 8px;
+background: #f3f4f6;
+padding: 4px;
+border-radius: 8px;
+}
+
+.risk-score-chart-section .time-filter-btn {
+padding: 8px 16px;
+border: none;
+background: transparent;
+color: #6b7280;
+font-size: 14px;
+font-weight: 500;
+border-radius: 6px;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+
+.risk-score-chart-section .time-filter-btn:hover {
+background: #e5e7eb;
+color: #374151;
+}
+
+.risk-score-chart-section .time-filter-btn.active {
+background: #9333ea;
+color: #ffffff;
+box-shadow: 0 2px 4px rgba(147, 51, 234, 0.3);
+}
+
+.risk-score-chart-section .chart-wrapper {
+position: relative;
+width: 100%;
+height: 300px;
+padding: 10px 0;
+}
+
+.risk-score-chart-section .no-chart-data {
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100%;
+background: #f9fafb;
+border-radius: 8px;
+border: 2px dashed #d1d5db;
+}
+
+.risk-score-chart-section .no-chart-data p {
+color: #6b7280;
+font-size: 14px;
+margin: 0;
+}
+
+/* Responsive adjustments for risk score chart */
+@media (max-width: 768px) {
+.risk-score-chart-section {
+padding: 15px;
+}
+
+.risk-score-chart-section h3 {
+font-size: 16px;
+}
+
+.risk-score-chart-section .chart-wrapper {
+height: 250px;
+}
+
+.risk-score-chart-section .time-filter-btn {
+padding: 6px 12px;
+font-size: 12px;
+}
+}
+
+@media (max-width: 480px) {
+.risk-score-chart-section .chart-wrapper {
+height: 200px;
+}
+
+.risk-score-chart-section .time-filter-buttons {
+width: 100%;
+justify-content: space-between;
+}
+
+.risk-score-chart-section .time-filter-btn {
+flex: 1;
+padding: 6px 8px;
+}
+}
+
+.back-button3:hover{
+
+}
+
+/* Back to Edit Treatment Plan Button */
+
+
+.patient-profile-header3 .back-button3 {
+padding: 10px 10px;
+font-size: 12px;
+font-weight: 600;
+border: 1px solid var(--primary-blue);
+background: var(--primary-blue);;
+color: white;
+border-radius: 8px;
+cursor: pointer;
+transition: all 0.3s ease;
+display: flex;
+align-items: center;
+gap: 8px;
+}
+
+.patient-profile-header3 .back-button3::before {
+content: "←";
+font-size: 18px;
+font-weight: bold;
+}
+
+.patient-profile-header3 .back-button3:hover {
+color: white;
+transform: translateX(-2px);
+}
+
+
+/* Patient Profile specific styles (Remains largely the same) */
+.patient-profile-wrapper3 {
+padding: 20px 0;
+}
+
+.patient-profile-header3 {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 10px;
+padding-bottom: 10px;
+border-bottom: 1px solid var(--border-light);
+}
+
+.patient-profile-header3 h2 {
+font-size: 2em;
+color: var(--text-dark);
+margin: 0;
+font-weight: 700;
+}
+
+.patient-profile-content-grid3 {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 20px;
+margin-top: 20px;
+}
+
+
+
+.patient-info-display3 {
+display: block; /* Ensure this container also allows its children (the <p> tags) to stack naturally */
+}
+/* In Dashboard.css */
+
+
+/* Patient information section styling */
+.patient-info-column h3 {
+color: var(--primary-blue);
+margin: 0 0 15px 0;
+padding: 0;
+font-size: 1.2em;
+font-weight: 600;
+padding-bottom: 5px;
+}
+
+.patient-info-column p {
+color: var(--text-dark);
+margin: 0 0 8px 0;
+padding: 0;
+font-size: 0.95em;
+line-height: 1.4;
+}
+
+/* Wound photo section styling */
+.wound-photo-column h3 {
+color: var(--primary-blue);
+margin: 0 0 15px 0;
+padding: 0;
+font-size: 1.2em;
+font-weight: 600;
+}
+
+.wound-photo-column p {
+color: var(--text-dark);
+margin: 0 0 8px 0;
+padding: 0;
+font-size: 0.95em;
+}
+
+/* Styles for the overall 2-column layout (patient info block and wound photo) */
+.patient-details-card3 p {
+color: black;
+display: block;
+margin-bottom: 8px;
+padding: 0;
+line-height: 1.4;
+}
+
+.patient-info-column {
+flex-grow: 1;
+padding: 15px;
+background-color: var(--background-white);
+border-radius: 8px;
+box-shadow: 0 1px 3px var(--shadow-light);
+}
+
+.patient-info-two-column-layout {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 20px;
+margin-top: 15px;
+padding: 0;
+}
+
+.patient-info-two-column-layout > div {
+padding: 0;
+margin: 0;
+}
+
+/* You generally don't need specific styles for patient-details-col-1 and -2 unless you want to add borders/backgrounds */
+.wound-photo-column {
+text-align: center;
+max-width: 300px;
+flex-shrink: 0;
+padding: 15px;
+background-color: var(--background-white);
+border-radius: 8px;
+box-shadow: 0 1px 3px var(--shadow-light);
+}
+
+.wound-photo-column img.latest-wound-image3 {
+max-width: 40%; /* Ensures the image fits within its column */
+height: auto; /* Maintains the image's aspect ratio */
+display: block; /* Removes extra space below the image */
+margin: 0 auto 0px auto; /* Centers the image horizontally and adds bottom margin */
+}
+
+/* Treatment Plan Summary - Smaller wound photo */
+.latest-wound-photo-card3 img.latest-wound-image3 {
+max-width: 200px; /* Fixed width for treatment plan summary */
+height: auto; /* Maintains aspect ratio */
+display: block; 
+margin: 0 auto 10px auto; /* Centers the image and adds bottom margin */
+}
+
+.latest-wound-photo-card3 {
+text-align: center; /* Centers all content in the card */
+max-width: 300px; /* Limits the card width */
+margin: 0 auto 20px auto; /* Centers the card itself */
+}
+
+
+
+.latest-metrics-card3 {
+grid-column: span 2;
+display: flex;
+flex-direction: column;
+}
+
+.metric-cards-container3 {
+display: flex;
+gap: 15px;
+flex-wrap: wrap;
+justify-content: space-around;
+margin-top: 15px;
+}
+
+.metric-card3 {
+background-color: var(--background-light);
+border: 1px solid var(--border-light);
+border-radius: 10px;
+padding: 10px;
+flex: 1;
+min-width: 130px;
+text-align: center;
+box-shadow: 0 2px 8px var(--shadow-light); /* Changed to shadow-light for consistency */
+}
+
+.metric-card3 h4 {
+margin-top: 0;
+margin-bottom: 8px;
+color: var(--text-medium);
+font-size: 0.9em;
+}
+
+.metric-value3 {
+font-size: 1.6em;
+font-weight: bold;
+color: var(--primary-blue);
+margin-bottom: 3px;
+}
+
+.metric-unit3 {
+font-size: 0.75em;
+color: var(--text-light);
+}
+
+/* Medication Management Styles */
+.medication-card3 {
+grid-column: span 2;
+}
+
+.medication-input-group3 {
+display: flex;
+flex-wrap: wrap; /* Allow wrapping inputs on smaller screens */
+gap: 10px;
+margin-bottom: 20px;
+align-items: center;
+}
+
+.medication-input-group3 .medication-input3 {
+flex: 1; /* Allows inputs to grow */
+min-width: 120px; /* Minimum width before wrapping */
+padding: 10px 15px;
+border: 1px solid var(--border-medium);
+border-radius: 8px;
+font-size: 0.95em;
+color: var(--text-dark);
+background-color: var(--background-white);
+transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.medication-input-group3 .medication-input3:focus {
+border-color: var(--primary-blue);
+box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+outline: none;
+}
+
+/* New: Styles for the checkbox group */
+.medication-checkbox-group3 {
+display: flex;
+gap: 15px; /* Space between checkboxes */
+flex-wrap: wrap; /* Allow wrapping */
+align-items: center;
+padding: 8px 10px;
+border: 1px solid var(--border-medium);
+border-radius: 8px;
+background-color: var(--background-white);
+flex: 2; /* Allow it to take more space than single inputs */
+min-width: 250px; /* Ensure it doesn't get too small */
+}
+
+.medication-checkbox-group3 label {
+display: flex;
+align-items: center;
+gap: 5px;
+font-size: 0.95em;
+color: var(--text-dark);
+cursor: pointer;
+}
+
+.medication-checkbox-group3 input[type="checkbox"] {
+transform: scale(1.1); /* Slightly larger checkboxes */
+accent-color: var(--primary-blue); /* Color of the checked box */
+}
+
+
+.add-medication-button3 {
+background-color: var(--success-color);
+color: var(--background-white);
+padding: 10px 20px;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+font-size: 0.95em;
+font-weight: 500;
+transition: background-color 0.3s ease, transform 0.2s ease;
+white-space: nowrap; /* Prevent text from wrapping */
+}
+
+
+.add-medication-button3:hover {
+background-color: #218838; /* Darker green */
+transform: translateY(-1px);
+}
+
+/* Add Button Styles */
+.add-button3 {
+background-color: var(--primary-blue);
+color: var(--background-white);
+padding: 6px 14px;
+border: none;
+border-radius: 6px;
+cursor: pointer;
+font-size: 0.9em;
+font-weight: 500;
+transition: background-color 0.3s ease, transform 0.2s ease;
+white-space: nowrap;
+margin-right: 5px;
+margin-bottom: 10px;
+}
+
+.add-button3:hover {
+background-color: #218838;
+transform: translateY(-1px);
+}
+
+/* Remove Button Styles */
+.remove-button3 {
+background-color: var(--danger-color);
+color: var(--background-white);
+padding: 6px 14px;
+border: none;
+border-radius: 6px;
+cursor: pointer;
+font-size: 0.9em;
+font-weight: 500;
+transition: background-color 0.3s ease, transform 0.2s ease;
+white-space: nowrap;
+}
+
+.remove-button3:hover {
+background-color: #c82333;
+transform: translateY(-1px);
+}
+
+/* Next Step Button Styles */
+.next-step-button3 {
+background-color: var(--primary-blue);
+color: var(--background-white);
+padding: 10px 20px;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+font-size: 1em;
+font-weight: 600;
+transition: background-color 0.3s ease, transform 0.2s ease;
+white-space: nowrap;
+}
+
+.next-step-button3:hover {
+background-color: #007bff;
+transform: translateY(-2px);
+}
+.cancel-button3{
+background-color: var(--danger-color);
+color: var(--background-white);
+padding: 10px 20px;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+font-size: 0.95em;
+font-weight: 500;
+transition: background-color 0.3s ease, transform 0.2s ease;
+white-space: nowrap;
+margin-right:10px;
+}
+
+.cancel-button3:hover {
+background-color: #c82333;
+transform: translateY(-1px);
+}
+
+/* View Analysis Button */
+.view-analysis-button3 {
+background-color: var(--primary-blue);
+color: var(--background-white);
+padding: 10px 20px;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+font-size: 0.95em;
+font-weight: 500;
+transition: background-color 0.3s ease, transform 0.2s ease;
+margin-top: 10px;
+white-space: nowrap;
+}
+
+.view-analysis-button3:hover {
+background-color: #007bff;
+transform: translateY(-1px);
+}
+
+/* Three Photo Modal Styles */
+.three-photo-modal-overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.8);
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 1000;
+}
+
+.three-photo-modal-content {
+background-color: var(--background-white);
+border-radius: 12px;
+padding: 30px;
+max-width: 1200px;
+width: 90%;
+max-height: 90%;
+overflow-y: auto;
+position: relative;
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.three-photo-modal-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 20px;
+padding-bottom: 15px;
+border-bottom: 2px solid var(--border-light);
+}
+
+.three-photo-modal-header h3 {
+margin: 0;
+color: var(--text-dark);
+font-size: 1.8em;
+font-weight: 600;
+}
+
+.three-photo-container {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 20px;
+margin-top: 20px;
+}
+
+.photo-analysis-item {
+display: flex;
+flex-direction: column;
+align-items: center;
+background-color: var(--background-light);
+border-radius: 10px;
+padding: 20px;
+box-shadow: 0 2px 8px var(--shadow-light);
+}
+
+.photo-analysis-item h4 {
+margin: 0 0 15px 0;
+color: var(--text-dark);
+font-size: 1.2em;
+font-weight: 600;
+text-align: center;
+}
+
+.photo-placeholder {
+width: 100%;
+height: 250px;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: var(--background-white);
+border-radius: 8px;
+border: 2px dashed var(--border-medium);
+overflow: hidden;
+}
+
+.photo-placeholder img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+border-radius: 6px;
+}
+
+.no-photo,
+.analysis-placeholder {
+color: var(--text-light);
+font-style: italic;
+text-align: center;
+padding: 20px;
+}
+
+.analysis-placeholder {
+color: var(--primary-blue);
+font-weight: 500;
+}
+
+/* Responsive design for three photo modal */
+@media (max-width: 768px) {
+.three-photo-container {
+grid-template-columns: 1fr;
+gap: 15px;
+}
+
+.three-photo-modal-content {
+padding: 20px;
+width: 95%;
+}
+
+.photo-placeholder {
+height: 200px;
+}
+}
+
+/* Diagnosis Section Styles */
+.diagnosis-section {
+margin-top: 25px;
+padding: 20px;
+background-color: var(--background-light);
+border-radius: 10px;
+border-top: 2px solid var(--border-medium);
+}
+
+.diagnosis-section h4 {
+margin: 0 0 15px 0;
+color: var(--text-dark);
+font-size: 1.2em;
+font-weight: 600;
+text-align: center;
+}
+
+.diagnosis-placeholder {
+text-align: center;
+padding: 30px;
+background-color: var(--background-white);
+border-radius: 8px;
+border: 2px dashed var(--border-medium);
+}
+
+.diagnosis-placeholder p {
+color: var(--text-light);
+font-style: italic;
+margin: 0;
+font-size: 1em;
+}
+
+/* Medication List Table Specific Styles */
+.medication-list-table3 {
+width: 100%;
+border-collapse: collapse;
+margin-top: 15px;
+border-radius: 8px;
+overflow: hidden;
+}
+
+.medication-list-table3 th,
+.medication-list-table3 td {
+padding: 12px 15px;
+text-align: left;
+border-bottom: 1px solid var(--border-light);
+}
+
+.medication-list-table3 th {
+background-color: #f0f4f7;
+font-weight: 600;
+color: var(--text-medium);
+font-size: 0.9em;
+text-align: center;
+}
+
+.medication-list-table3 td {
+color: var(--text-dark);
+font-size: 0.85em;
+text-align: center;
+}
+
+.medication-list-table3 tbody tr:last-child td {
+border-bottom: none;
+}
+
+.medication-list-table3 {
+padding: 6px 10px;
+font-size: 1em;
+}
+
+.remove-medication-button3, .edit-medication-button3 {
+background: none;
+border: none;
+cursor: pointer;
+color: #007bff;
+transition: color 0.2s ease;
+font-size: 1em;
+margin-right: 10px;
+}
+
+
+.no-medication-text3 {
+color: var(--text-light);
+font-style: italic;
+text-align: center;
+padding: 15px;
+background-color: var(--background-light);
+}
+
+/* Health Metrics Table Specific Styles */
+.health-metrics-table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 15px;
+font-size: 13px;
+}
+
+.health-metrics-table th {
+background-color: #f8f9fa;
+padding: 12px 10px;
+text-align: left;
+border-bottom: 2px solid #dee2e6;
+font-weight: 600;
+color: #495057;
+font-size: 12px;
+}
+
+.health-metrics-table td {
+padding: 12px 10px;
+border-bottom: 1px solid #e9ecef;
+font-size: 12px;
+vertical-align: middle;
+}
+
+/* Specific column widths and spacing for health metrics table */
+.health-metrics-table th:first-child,
+.health-metrics-table td:first-child {
+width: 12%;
+min-width: 100px;
+white-space: nowrap;
+padding-right: 12px;
+font-weight: 500;
+}
+
+.health-metrics-table th:nth-child(2),
+.health-metrics-table td:nth-child(2) {
+width: 15%;
+min-width: 110px;
+text-align: center;
+padding-left: 10px;
+padding-right: 10px;
+}
+
+.health-metrics-table th:nth-child(3),
+.health-metrics-table td:nth-child(3) {
+width: 15%;
+min-width: 110px;
+text-align: center;
+padding-left: 10px;
+padding-right: 10px;
+}
+
+.health-metrics-table th:nth-child(4),
+.health-metrics-table td:nth-child(4) {
+width: 12%;
+min-width: 90px;
+text-align: center;
+padding-left: 10px;
+padding-right: 10px;
+}
+
+.health-metrics-table th:nth-child(5),
+.health-metrics-table td:nth-child(5) {
+width: 16%;
+min-width: 120px;
+text-align: center;
+padding-left: 10px;
+padding-right: 10px;
+}
+
+.health-metrics-table tbody tr:hover {
+background-color: #f8f9fa;
+}
+
+.health-metrics-table tbody tr:last-child td {
+border-bottom: none;
+}
+
+/* Smaller Pagination for Health Metrics Table */
+.health-metrics-pagination .pagination-container {
+margin-top: 10px;
+padding: 10px 0;
+}
+
+.health-metrics-pagination .pagination-btn {
+padding: 4px 8px;
+min-width: 26px;
+height: 26px;
+font-size: 11px;
+}
+
+.health-metrics-pagination .pagination-btn.prev-btn,
+.health-metrics-pagination .pagination-btn.next-btn {
+padding: 4px 10px;
+font-size: 11px;
+}
+
+.health-metrics-pagination .pagination-icon {
+width: 10px;
+height: 10px;
+}
+
+.health-metrics-pagination .pagination-ellipsis {
+padding: 4px 4px;
+height: 26px;
+font-size: 11px;
+}
+
+.health-metrics-pagination .page-info {
+font-size: 11px;
+}
+
+/* Health metrics table container */
+.health-metrics-table-container {
+overflow-x: auto;
+margin-top: 10px;
+}
+
+/* History Charts Section Styles */
+.history-charts-section-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 0px;
+}
+
+.history-charts-section-header h3 {
+margin: 0;
+}
+
+.chart-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 10px;
+}
+
+.chart-header h4 {
+margin: 0;
+}
+
+/* Button Icon Styles */
+.button-icon {
+width: 16px;
+height: 16px;
+display: inline-block;
+vertical-align: middle;
+}
+
+.button-icon.back-icon {
+margin-right: 8px;
+}
+
+/* New styles for the risk classification chart */
+.risk-chart-card3 {
+grid-column: span 1; /* Make it span across two columns for better visibility */
+display: flex;
+flex-direction: column;
+align-items: center; /* This centers the content horizontally within the card */
+margin-top: 0px; /* Add margin to push it below other widgets if needed by grid flow */
+}
+
+.bar-chart-container3 {
+display: flex;
+justify-content: space-around;
+align-items: flex-end; /* Bars grow upwards from the bottom */
+width: 100%;
+height: 200px; /* Fixed height for the chart area */
+padding: 10px;
+background-color: var(--background-white);
+border-radius: var(--border-radius);
+box-shadow: var(--card-shadow);
+/* margin-top: 20px; Removed as it's now on the card itself */
+}
+
+.bar-chart-item3 {
+display: flex;
+flex-direction: column;
+align-items: center; /* This centers the label, bar, and value horizontally within each bar item */
+width: 30%; /* Adjust width for spacing between bars */
+height: 100%; /* Take full height of the container */
+justify-content: flex-end; /* Align content to the bottom */
+}
+
+.bar-chart-label3 {
+font-size: 0.9em;
+color: var(--text-color-light);
+margin-bottom: 5px;
+text-align: center; /* Ensure label text is centered */
+}
+
+.bar-chart-bar-wrapper3 {
+display: flex;
+align-items: flex-end;
+justify-content: center; /* Center the bar within its wrapper */
+width: 100%;
+height: 100%; /* Bar wrapper takes full height */
+position: relative;
+}
+
+.bar-chart-bar3 {
+width: 60%; /* Width of the actual bar */
+/* margin: 0 auto; Removed as justify-content on wrapper handles centering */
+border-radius: 5px 5px 0 0;
+transition: height 0.3s ease-in-out;
+position: absolute;
+bottom: 0;
+}
+
+/* Colors for risk bars */
+.low-risk-bar3 {
+background-color: green; /* Example green for Low */
+}
+
+.moderate-risk-bar3 {
+background-color: orange; /* Example orange for Moderate */
+}
+
+.high-risk-bar3 {
+background-color: red; /* Example red for High */
+}
+
+.bar-chart-value3 {
+margin-top: 5px;
+font-weight: bold;
+color: var(--text-color);
+text-align: center; /* Ensure value text is centered */
+}
+
+/* Pop-up Overlay Styles */
+.popup-overlay3 {
+position: fixed; /* Fixes the overlay to the viewport */
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background */
+display: flex; /* Use flexbox to center the content */
+justify-content: center; /* Center horizontally */
+align-items: center; /* Center vertically */
+z-index: 1000; /* Ensure it's above other content */
+}
+
+/* Pop-up Content Styles */
+.popup-content3 {
+background-color: #ffffff; /* White background for the pop-up box */
+padding: 30px;
+border-radius: 12px; /* Rounded corners */
+box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow for depth */
+text-align: center;
+max-width: 400px; /* Max width for readability */
+width: 90%; /* Responsive width */
+position: relative;
+}
+
+.popup-content3 h3 {
+font-size: 1.8em;
+color: #333333;
+margin-top: 0;
+margin-bottom: 15px;
+}
+
+.popup-content3 p {
+font-size: 1.1em;
+color: #555555;
+margin-bottom: 25px;
+line-height: 1.5;
+}
+
+.popup-content3 button {
+background-color: #007bff; /* Primary blue button */
+color: #ffffff;
+padding: 12px 25px;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+font-size: 1em;
+font-weight: 600;
+transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.popup-content3 button:hover {
+background-color: #0056b3; /* Darker blue on hover */
+transform: translateY(-1px); /* Slight lift effect */
+}
+
+
+/* ========================================
+  FULL-WIDTH TAB SECTIONS - NEW STYLES
+  ======================================== */
+
+/* Medication Tab - Full Width Section */
+.current-medications-section {
+background-color: var(--background-white);
+border-radius: 12px;
+padding: 25px;
+box-shadow: 0 2px 8px var(--shadow-light);
+margin: 20px;
+}
+
+.current-medications-section h3 {
+color: var(--text-dark);
+font-size: 1.4em;
+font-weight: 600;
+margin-top: 0;
+margin-bottom: 20px;
+}
+
+.medications-table-container {
+margin-bottom: 25px;
+overflow-x: auto;
+}
+
+.medications-table-container label {
+display: block;
+font-size: 16px;
+font-weight: 600;
+color: var(--text-dark);
+margin-bottom: 15px;
+}
+
+.medications-table {
+width: 100%;
+border-collapse: collapse;
+background-color: white;
+border-radius: 8px;
+overflow: hidden;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.medications-table thead {
+background-color: #f8f9fa;
+}
+
+.medications-table th {
+padding: 12px 15px;
+text-align: left;
+font-weight: 600;
+color: var(--text-dark);
+font-size: 14px;
+border-bottom: 2px solid var(--border-light);
+}
+
+.medications-table td {
+padding: 10px 15px;
+border-bottom: 1px solid var(--border-light);
+}
+
+.medications-table tbody tr:hover {
+background-color: #f8f9fa;
+}
+
+.med-input {
+width: 100%;
+padding: 8px 12px;
+border: 1px solid var(--border-light);
+border-radius: 6px;
+font-size: 14px;
+background-color: white;
+}
+
+.med-input:read-only {
+background-color: #f8f9fa;
+cursor: default;
+}
+
+.med-input:focus {
+outline: none;
+border-color: var(--primary-blue);
+box-shadow: 0 0 0 3px rgba(31, 170, 237, 0.1);
+}
+
+.med-actions {
+display: flex;
+gap: 8px;
+justify-content: center;
+align-items: center;
+}
+
+.edit-medication-button3,
+.remove-medication-button3,
+.add-med-button {
+background: none;
+border: none;
+cursor: pointer;
+padding: 6px;
+border-radius: 6px;
+transition: all 0.2s ease;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.edit-medication-button3:hover {
+background-color: rgba(31, 170, 237, 0.1);
+}
+
+.remove-medication-button3:hover {
+background-color: rgba(220, 53, 69, 0.1);
+}
+
+.add-med-button:hover {
+background-color: rgba(40, 167, 69, 0.1);
+}
+
+.edit-medication-button3 .button-icon,
+.remove-medication-button3 .button-icon,
+.add-med-button img {
+width: 20px;
+height: 20px;
+}
+
+.action-button3 {
+padding: 8px 16px;
+border: none;
+border-radius: 6px;
+font-size: 14px;
+font-weight: 500;
+cursor: pointer;
+transition: all 0.2s ease;
+}
+
+.save-button3 {
+background-color: var(--primary-blue);
+color: white;
+}
+
+.save-button3:hover {
+background-color: #1890d1;
+}
+
+.cancel-button3 {
+background-color: #6c757d;
+color: white;
+}
+
+.cancel-button3:hover {
+background-color: #5a6268;
+}
+
+.medication-checkbox-group-edit3 {
+display: flex;
+gap: 15px;
+align-items: center;
+}
+
+.medication-checkbox-group-edit3 label {
+display: flex;
+align-items: center;
+gap: 5px;
+font-size: 14px;
+color: var(--text-dark);
+cursor: pointer;
+margin: 0;
+}
+
+.medication-checkbox-group-edit3 input[type="checkbox"] {
+cursor: pointer;
+width: 16px;
+height: 16px;
+}
+
+.medication-input-group3 {
+display: flex;
+flex-wrap: wrap;
+gap: 15px;
+align-items: flex-end;
+background-color: #f8f9fa;
+padding: 20px;
+border-radius: 8px;
+}
+
+.medication-input3 {
+flex: 1;
+min-width: 150px;
+padding: 10px 15px;
+border: 1px solid var(--border-light);
+border-radius: 6px;
+font-size: 14px;
+}
+
+.medication-input3:focus {
+outline: none;
+border-color: var(--primary-blue);
+box-shadow: 0 0 0 3px rgba(31, 170, 237, 0.1);
+}
+
+.medication-checkbox-group3 {
+display: flex;
+gap: 20px;
+align-items: center;
+padding: 10px 15px;
+background-color: white;
+border: 1px solid var(--border-light);
+border-radius: 6px;
+}
+
+.medication-checkbox-group3 label {
+display: flex;
+align-items: center;
+gap: 6px;
+font-size: 14px;
+color: var(--text-dark);
+cursor: pointer;
+margin: 0;
+}
+
+.medication-checkbox-group3 input[type="checkbox"] {
+cursor: pointer;
+width: 16px;
+height: 16px;
+}
+
+.add-medication-button3 {
+padding: 10px 25px;
+background-color: var(--primary-blue);
+color: white;
+border: none;
+border-radius: 6px;
+font-size: 14px;
+font-weight: 500;
+cursor: pointer;
+transition: all 0.2s ease;
+white-space: nowrap;
+}
+
+.add-medication-button3:hover {
+background-color: #1890d1;
+transform: translateY(-1px);
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Team Care Tab - Doctor Cards Section */
+.doctor-assigned-section {
+background-color: var(--background-white);
+border-radius: 12px;
+padding: 25px;
+box-shadow: 0 2px 8px var(--shadow-light);
+margin: 20px;
+}
+
+.doctor-assigned-section h3 {
+color: var(--text-dark);
+font-size: 1.4em;
+font-weight: 600;
+margin-top: 0;
+margin-bottom: 20px;
+}
+
+.doctors-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+gap: 20px;
+}
+
+.doctor-card {
+background-color: var(--background-white);
+border: 1px solid var(--border-light);
+border-radius: 12px;
+padding: 20px;
+display: flex;
+align-items: center;
+gap: 15px;
+box-shadow: 0 2px 6px var(--shadow-light);
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.doctor-card:hover {
+transform: translateY(-3px);
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.doctor-avatar {
+width: 60px;
+height: 60px;
+border-radius: 50%;
+overflow: hidden;
+flex-shrink: 0;
+border: 2px solid var(--border-light);
+}
+
+.doctor-avatar img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.doctor-info {
+flex: 1;
+}
+
+.doctor-label {
+display: block;
+font-size: 12px;
+color: var(--text-light);
+margin-bottom: 5px;
+font-weight: 500;
+}
+
+.doctor-name {
+margin: 0 0 5px 0;
+font-size: 16px;
+font-weight: 600;
+color: var(--text-dark);
+}
+
+.doctor-specialty {
+margin: 0;
+font-size: 14px;
+color: var(--text-medium);
+}
+
+.specialist-card {
+border-left: 3px solid var(--primary-blue);
+}
+
+.placeholder-card {
+opacity: 0.6;
+border-style: dashed;
+}
+
+/* Appointment Schedule Tab - Full Width */
+.appointment-schedule-section {
+background-color: var(--background-white);
+border-radius: 12px;
+padding: 25px;
+box-shadow: 0 2px 8px var(--shadow-light);
+margin: 20px;
+}
+
+.appointment-schedule-section h3 {
+color: var(--text-dark);
+font-size: 1.4em;
+font-weight: 600;
+margin-top: 0;
+margin-bottom: 20px;
+}
+
+.dashboard-appointment-schedule-container {
+display: flex;
+gap: 20px;
+flex-wrap: wrap;
+align-items: flex-start;
+justify-content: flex-start;
+}
+
+.dashboard-appointment-calendar-container {
+flex: 0 0 auto;
+min-width: 200px;
+max-width: 280px;
+}
+
+.dashboard-appointment-calendar-container .react-calendar {
+font-size: 0.85em;
+width: 280px
+}
+
+.dashboard-appointment-calendar-container .react-calendar__tile {
+padding: 8px 4px;
+font-size: 0.90em;
+}
+
+.dashboard-appointment-calendar-container .react-calendar__navigation button {
+font-size: 0.9em;
+min-width: 32px;
+}
+
+.dashboard-appointment-calendar-container .react-calendar__month-view__weekdays {
+font-size: 0.75em;
+}
+
+.dashboard-appointment-details-list {
+flex: 1;
+min-width: 200px;
+max-width: 300px;
+}
+
+.dashboard-appointment-details-list h4 {
+margin: 0 0 10px 0;
+font-size: 16px;
+font-weight: 600;
+color: var(--text-dark);
+}
+
+.dashboard-appointment-list {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.dashboard-appointment-item {
+background-color: #f8f9fa;
+border-left: 4px solid var(--primary-blue);
+padding: 12px;
+margin-bottom: 10px;
+border-radius: 8px;
+transition: all 0.2s ease;
+}
+
+.dashboard-appointment-item:hover {
+transform: translateX(5px);
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-appointment-date-time {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 6px;
+}
+
+.dashboard-appointment-date-time strong {
+font-size: 14px;
+color: var(--text-dark);
+}
+
+.dashboard-appointment-time {
+font-size: 13px;
+color: var(--text-medium);
+margin-left: 8px;
+}
+
+.dashboard-appointment-notes {
+font-size: 13px;
+color: var(--text-medium);
+line-height: 1.4;
+}
+
+.no-appointments {
+text-align: center;
+color: var(--text-light);
+font-style: italic;
+padding: 10px;
+}
+
+/* Patient Detail Appointment Tab - Separate Styles */
+.patient-appointment-two-column-layout {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 30px;
+align-items: start;
+}
+
+.patient-appointment-left-column {
+background-color: var(--background-light);
+padding: 20px;
+border-radius: 12px;
+}
+
+.patient-appointment-right-column {
+background-color: var(--background-light);
+padding: 20px;
+border-radius: 12px;
+}
+
+.patient-appointment-schedule-container {
+display: flex;
+gap: 20px;
+flex-wrap: nowrap;
+align-items: flex-start;
+justify-content: flex-start;
+}
+
+.patient-appointment-calendar-container {
+flex: 0 0 280px;
+min-width: 280px;
+max-width: 280px;
+
+
+}
+
+.patient-appointment-calendar-container .react-calendar {
+font-size: 0.85em;
+width: 280px;
+}
+
+.patient-appointment-calendar-container .react-calendar__tile {
+padding: 8px 4px;
+font-size: 0.90em;
+}
+
+.patient-appointment-calendar-container .react-calendar__navigation button {
+font-size: 0.9em;
+min-width: 32px;
+}
+
+.patient-appointment-calendar-container .react-calendar__month-view__weekdays {
+font-size: 0.75em;
+}
+
+.patient-appointment-details-list {
+flex: 1;
+min-width: 250px;
+max-height: 350px;
+display: flex;
+flex-direction: column;
+}
+
+.patient-appointment-details-list h4 {
+margin: 0 0 10px 0;
+font-size: 16px;
+font-weight: 600;
+color: var(--text-dark);
+}
+
+.patient-appointment-list {
+list-style: none;
+padding: 0;
+margin: 0;
+overflow-y: auto;
+flex: 1;
+}
+
+.patient-appointment-item {
+background-color: #f8f9fa;
+border-left: 4px solid var(--primary-blue);
+padding: 12px;
+margin-bottom: 10px;
+border-radius: 8px;
+transition: all 0.2s ease;
+}
+
+.patient-appointment-item:hover {
+transform: translateX(5px);
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.patient-appointment-date-time {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 6px;
+}
+
+.patient-appointment-date-time strong {
+font-size: 14px;
+color: var(--text-dark);
+}
+
+.patient-appointment-time {
+font-size: 13px;
+color: var(--text-medium);
+margin-left: 8px;
+}
+
+.patient-appointment-notes {
+font-size: 13px;
+color: var(--text-medium);
+line-height: 1.4;
+}
+
+/* Patient Appointment Status Table */
+.patient-appointment-table-container {
+width: 100%;
+}
+
+.patient-appointment-table-container h4 {
+margin: 0 0 15px 0;
+font-size: 16px;
+font-weight: 600;
+color: var(--text-dark);
+}
+
+.appointment-table-wrapper {
+overflow-x: auto;
+max-height: 400px;
+overflow-y: auto;
+}
+
+.patient-appointment-status-table {
+width: 100%;
+border-collapse: collapse;
+background-color: white;
+border-radius: 8px;
+overflow: hidden;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.patient-appointment-status-table thead {
+background-color: #f8f9fa;
+position: sticky;
+top: 0;
+z-index: 1;
+}
+
+.patient-appointment-status-table th {
+padding: 12px 15px;
+text-align: left;
+font-weight: 600;
+color: var(--text-dark);
+font-size: 14px;
+border-bottom: 2px solid var(--border-light);
+}
+
+.patient-appointment-status-table td {
+padding: 12px 15px;
+border-bottom: 1px solid var(--border-light);
+font-size: 14px;
+color: var(--text-medium);
+}
+
+.patient-appointment-status-table tbody tr:hover {
+background-color: #f8f9fa;
+}
+
+.patient-appointment-status-table tbody tr:last-child td {
+border-bottom: none;
+}
+
+.appointment-status-badge {
+display: inline-block;
+padding: 4px 12px;
+border-radius: 12px;
+font-size: 12px;
+font-weight: 500;
+text-align: center;
+}
+
+.appointment-status-badge.pending {
+background-color: #fff3cd;
+color: #856404;
+}
+
+.appointment-status-badge.confirmed {
+background-color: #d1ecf1;
+color: #0c5460;
+}
+
+.appointment-status-badge.completed {
+background-color: #d4edda;
+color: #155724;
+}
+
+.appointment-status-badge.cancelled {
+background-color: #f8d7da;
+color: #721c24;
+}
+
+.appointment-status-badge.rescheduled {
+background-color: #e7f3ff;
+color: #004085;
+}
+
+/* Health Metrics History Tab - Full Width */
+.health-metrics-history-section {
+background-color: var(--background-white);
+border-radius: 12px;
+padding: 25px;
+box-shadow: 0 2px 8px var(--shadow-light);
+margin: 20px;
+}
+
+.health-metrics-history-section h3 {
+color: var(--text-dark);
+font-size: 1.4em;
+font-weight: 600;
+margin-top: 0;
+margin-bottom: 20px;
+}
+
+.health-metrics-table-container {
+overflow-x: auto;
+}
+
+.health-metrics-table {
+width: 100%;
+border-collapse: collapse;
+background-color: white;
+border-radius: 8px;
+overflow: hidden;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.health-metrics-table thead {
+background-color: #f8f9fa;
+}
+
+.health-metrics-table th {
+padding: 12px 15px;
+text-align: left;
+font-weight: 600;
+color: var(--text-dark);
+font-size: 14px;
+border-bottom: 2px solid var(--border-light);
+white-space: nowrap;
+}
+
+.health-metrics-table td {
+padding: 12px 15px;
+border-bottom: 1px solid var(--border-light);
+font-size: 14px;
+color: var(--text-medium);
+}
+
+.health-metrics-table tbody tr:hover {
+background-color: #f8f9fa;
+}
+
+.metric-value {
+font-weight: 500;
+color: var(--text-dark);
+}
+
+.health-metrics-pagination {
+margin-top: 20px;
+display: flex;
+justify-content: left;
+}
+
+.no-metrics-message {
+text-align: center;
+padding: 40px;
+color: var(--text-light);
+font-style: italic;
+}
+
+/* Wound Gallery Tab - Full Width (Enhance existing styles) */
+.wound-gallery-section {
+background-color: var(--background-white);
+border-radius: 12px;
+padding: 25px;
+box-shadow: 0 2px 8px var(--shadow-light);
+margin: 20px;
+}
+
+.wound-gallery-section h3 {
+color: var(--text-dark);
+font-size: 1.4em;
+font-weight: 600;
+margin-top: 0;
+margin-bottom: 20px;
+}
+
+/* Responsive adjustments for full-width sections */
+@media (max-width: 768px) {
+.current-medications-section,
+.doctor-assigned-section,
+.appointment-schedule-section,
+.health-metrics-history-section,
+.wound-gallery-section {
+margin: 15px 10px;
+padding: 20px;
+}
+
+.medications-table,
+.health-metrics-table {
+font-size: 12px;
+}
+
+.medications-table th,
+.medications-table td,
+.health-metrics-table th,
+.health-metrics-table td {
+padding: 8px 10px;
+}
+
+.doctors-grid {
+grid-template-columns: 1fr;
+}
+
+.dashboard-appointment-schedule-container {
+flex-direction: column;
+align-items: center;
+}
+
+
+
+.medication-input-group3 {
+flex-direction: column;
+align-items: stretch;
+}
+
+.medication-input3 {
+min-width: 100%;
+}
+}
+
+/* Laboratory Results Section - 6 Column Grid */
+.laboratory-results-section {
+background-color: var(--background-white);
+border-radius: 12px;
+padding: 20px;
+box-shadow: 0 2px 8px var(--shadow-light);
+margin-bottom: 20px;
+}
+
+.laboratory-results-section h3 {
+color: var(--text-dark);
+font-size: 1.2em;
+font-weight: 600;
+margin-top: 0;
+}
+
+.lab-date-submitted {
+margin-bottom: 20px;
+padding: 5px 5px;
+background-color: var(--background-light);
+border-radius: 8px;
+font-size: 0.95em;
+color: var(--text-medium);
+}
+
+.lab-date-submitted strong {
+color: var(--text-dark);
+font-weight: 500;
+}
+
+.lab-results-grid {
+display: grid;
+grid-template-columns: repeat(6, 1fr);
+gap: 10px;
+margin-top: 10px;
+}
+
+.lab-result-item {
+display: flex;
+flex-direction: column;
+padding: 12px;
+background-color: var(--background-light);
+border-radius: 8px;
+transition: all 0.3s ease;
+}
+
+.lab-result-item:hover {
+background-color: #e3f2fd;
+transform: translateY(-2px);
+box-shadow: 0 4px 8px var(--shadow-light);
+}
+
+.lab-label {
+font-size: 0.85em;
+color: var(--text-medium);
+font-weight: 500;
+margin-bottom: 5px;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+.lab-value {
+font-size: 1.1em;
+color: var(--text-dark);
+font-weight: 600;
+}
+
+/* Latest Health Metrics Section */
+.latest-health-metrics-section {
+background-color: var(--background-white);
+border-radius: 12px;
+padding: 20px;
+box-shadow: 0 2px 8px var(--shadow-light);
+}
+
+.latest-health-metrics-section h3 {
+color: var(--text-dark);
+font-size: 1.2em;
+font-weight: 600;
+margin-top: 0;
+}
+
+.latest-health-metrics-section p {
+margin: 10px 0;
+padding: 5px 5px;
+background-color: var(--background-light);
+border-radius: 8px;
+font-size: 0.95em;
+font-weight: 500;
+}
+
+.latest-health-metrics-section strong {
+color: var(--text-dark);
+font-weight: 500;
+margin-right: 8px;
+}
+
+/* Responsive adjustments for lab results */
+@media (max-width: 1400px) {
+.lab-results-grid {
+grid-template-columns: repeat(4, 1fr);
+}
+}
+
+@media (max-width: 1024px) {
+.lab-results-grid {
+grid-template-columns: repeat(3, 1fr);
+}
+}
+
+@media (max-width: 768px) {
+.lab-results-grid {
+grid-template-columns: repeat(2, 1fr);
+gap: 12px;
+}
+
+.lab-result-item {
+padding: 10px;
+}
+
+.laboratory-results-section,
+.latest-health-metrics-section {
+padding: 15px;
+}
+}
+
+@media (max-width: 480px) {
+.lab-results-grid {
+grid-template-columns: 1fr;
+}
+}
+
+/* ========================================
+  DiaSight Page Styles
+  ======================================== */
+
+/* DiaSight table wrapper - centers the table */
+.diasight-table-wrapper {
+display: flex;
+justify-content: center;
+width: 100%;
+}
+
+/* DiaSight content container - holds table and pagination */
+.diasight-content-container {
+width: 100%;
+max-width: 1000px;
+}
+
+/* DiaSight table - unique styles to avoid conflicts */
+.diasight-patient-table {
+width: 100%;
+border-collapse: collapse;
+border-radius: 8px;
+overflow: hidden;
+text-align: center;
+}
+
+.diasight-patient-table thead {
+background-color: var(--background-light);
+}
+
+.diasight-patient-table th {
+padding: 10px 10px;
+text-align: center;
+font-weight: bold;
+font-size: 0.95em;
+color: var(--text-medium);
+}
+
+/* Patient Name column header - left aligned */
+.diasight-patient-table th.diasight-patient-name-header {
+text-align: center;
+padding-right: 5px;
+}
+
+.diasight-patient-table td {
+color: var(--text-dark);
+text-align: center;
+font-size: 0.9em;
+padding: 5px 10px;
+}
+
+/* Patient Name cell - left aligned */
+.diasight-patient-table td.diasight-patient-name-cell {
+text-align: left;
+padding-right: 0px;
+width: 30%;
+max-width: 300px;
+}
+
+/* Lab Status cell - centered */
+.diasight-patient-table td.lab-status-cell {
+width: 35%;
+text-align: center;
+}
+
+/* Actions cell - centered with reduced width */
+.diasight-patient-table td.patient-actions-cell {
+width: 30%;
+text-align: center;
+}
+
+/* Patient name container styling */
+.diasight-patient-name-container {
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.diasight-patient-table tr:last-child td {
+border-bottom: none;
+}
+
+/* ========================================
+   DiaSight Results Section Styles
+   ======================================== */
+
+.diasight-results-section {
+  background-color: var(--background-white);
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 2px 8px var(--shadow-light);
+}
+
+.diasight-results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.diasight-results-header h3 {
+  color: var(--text-dark);
+  font-size: 1.3em;
+  font-weight: 600;
+  margin: 0;
+}
+
+.run-diasight-button {
+  background-color: var(--primary-blue);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95em;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.run-diasight-button:hover:not(:disabled) {
+  background-color: #1789c2;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(31, 170, 237, 0.3);
+}
+
+.run-diasight-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Latest Result Card */
+.diasight-latest-result {
+  margin-bottom: 30px;
+}
+
+.diasight-latest-result h4 {
+  color: var(--text-dark);
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.diasight-result-card {
+  background-color: var(--background-light);
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid var(--border-light);
+}
+
+.diasight-prediction-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 25px;
+  border-radius: 10px;
+  border: 2px solid;
+  margin-bottom: 20px;
+}
+
+.diasight-prediction-badge .prediction-label {
+  font-size: 1em;
+  color: var(--text-medium);
+  font-weight: 500;
+}
+
+.diasight-prediction-badge .prediction-value {
+  font-size: 1.4em;
+  font-weight: 700;
+}
+
+.diasight-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.diasight-metric-item {
+  background-color: var(--background-white);
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border-light);
+  text-align: center;
+}
+
+.diasight-metric-item .metric-label {
+  display: block;
+  font-size: 0.8em;
+  color: var(--text-light);
+  margin-bottom: 4px;
+}
+
+.diasight-metric-item .metric-value {
+  display: block;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* Progression Section */
+.diasight-progression-section {
+  margin-bottom: 30px;
+}
+
+.diasight-progression-section h4 {
+  color: var(--text-dark);
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* History Table */
+.diasight-history-section {
+  margin-top: 20px;
+}
+
+.diasight-history-section h4 {
+  color: var(--text-dark);
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.diasight-history-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--background-white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px var(--shadow-light);
+}
+
+.diasight-history-table th,
+.diasight-history-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.diasight-history-table th {
+  background-color: var(--background-light);
+  font-weight: 600;
+  color: var(--text-medium);
+  font-size: 0.9em;
+}
+
+.diasight-history-table td {
+  color: var(--text-dark);
+  font-size: 0.9em;
+}
+
+.diasight-history-table tr:last-child td {
+  border-bottom: none;
+}
+
+.diasight-history-table tr:hover {
+  background-color: var(--background-light);
+}
+
+/* DR Prediction Badge */
+.dr-prediction-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: 0.85em;
+}
+
+.dr-prediction-badge.dr-no-dr {
+  background-color: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+}
+
+.dr-prediction-badge.dr-mild {
+  background-color: rgba(255, 193, 7, 0.15);
+  color: #d4a206;
+}
+
+.dr-prediction-badge.dr-moderate {
+  background-color: rgba(255, 152, 0, 0.15);
+  color: #ff9800;
+}
+
+.dr-prediction-badge.dr-severe {
+  background-color: rgba(244, 67, 54, 0.15);
+  color: #f44336;
+}
+
+.dr-prediction-badge.dr-proliferative {
+  background-color: rgba(156, 39, 176, 0.15);
+  color: #9c27b0;
+}
+
+/* No Results State */
+.no-diasight-results {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-light);
+}
+
+.no-diasight-results .no-results-icon {
+  font-size: 4em;
+  margin-bottom: 15px;
+}
+
+.no-diasight-results p {
+  font-size: 1.1em;
+  margin: 5px 0;
+}
+
+.no-diasight-results .no-results-hint {
+  font-size: 0.9em;
+  color: var(--text-light);
+  margin-top: 10px;
+}
+
+/* ========================================
+   DiaSight Modal Styles
+   ======================================== */
+
+.diasight-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.diasight-modal-content {
+  background-color: var(--background-white);
+  border-radius: 16px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.diasight-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+  border-bottom: 1px solid var(--border-light);
+  background-color: var(--background-light);
+  border-radius: 16px 16px 0 0;
+}
+
+.diasight-modal-header h3 {
+  margin: 0;
+  font-size: 1.3em;
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.diasight-modal-body {
+  padding: 25px;
+}
+
+.patient-info-banner {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background-color: var(--background-light);
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+.patient-avatar-modal {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.patient-modal-details h4 {
+  margin: 0 0 5px 0;
+  font-size: 1.1em;
+  color: var(--text-dark);
+}
+
+.patient-modal-details .analysis-timestamp {
+  font-size: 0.85em;
+  color: var(--text-light);
+}
+
+.diasight-result-main {
+  margin-bottom: 20px;
+}
+
+.prediction-result-box {
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.prediction-result-box .prediction-title {
+  font-size: 0.9em;
+  color: var(--text-medium);
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.prediction-result-box .prediction-main-result {
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.diasight-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.diasight-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  background-color: var(--background-light);
+  border-radius: 8px;
+  border: 1px solid var(--border-light);
+}
+
+.diasight-stat-card .stat-icon {
+  font-size: 1.3em;
+}
+
+.diasight-stat-card .stat-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.diasight-stat-card .stat-label {
+  font-size: 0.8em;
+  color: var(--text-light);
+}
+
+.diasight-stat-card .stat-value {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* Probability Distribution */
+.probability-distribution {
+  background-color: var(--background-light);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.probability-distribution h4 {
+  margin: 0 0 15px 0;
+  font-size: 1em;
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.probability-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.probability-item {
+  display: grid;
+  grid-template-columns: 100px 1fr 60px;
+  align-items: center;
+  gap: 10px;
+}
+
+.probability-label {
+  font-size: 0.9em;
+  color: var(--text-medium);
+  font-weight: 500;
+}
+
+.probability-bar-container {
+  height: 10px;
+  background-color: var(--border-light);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.probability-bar-fill {
+  height: 100%;
+  border-radius: 5px;
+  transition: width 0.5s ease;
+}
+
+.probability-value {
+  font-size: 0.9em;
+  color: var(--text-dark);
+  font-weight: 600;
+  text-align: right;
+}
+
+/* Modal Actions */
+.diasight-modal-actions {
+  display: flex;
+  gap: 15px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-light);
+}
+
+.view-patient-button {
+  flex: 1;
+  padding: 12px 20px;
+  background-color: var(--primary-blue);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95em;
+  transition: all 0.3s ease;
+}
+
+.view-patient-button:hover {
+  background-color: #1789c2;
+}
+
+.close-modal-button {
+  padding: 12px 30px;
+  background-color: var(--background-light);
+  color: var(--text-dark);
+  border: 1px solid var(--border-medium);
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.95em;
+  transition: all 0.3s ease;
+}
+
+.close-modal-button:hover {
+  background-color: var(--border-light);
+}
+
+/* DiaSight Run Button Animation */
+.diasight-run-button {
+  transition: all 0.3s ease;
+}
+
+.diasight-run-button:hover:not(:disabled) {
+  transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .diasight-stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .diasight-modal-content {
+    width: 95%;
+    margin: 10px;
+  }
+  
+  .probability-item {
+    grid-template-columns: 80px 1fr 50px;
+  }
+  
+  .diasight-results-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .run-diasight-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
