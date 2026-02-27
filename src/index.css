@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+body{
+  font-family: 'Inter', sans-serif;
+}
+/* LandingPage.css */
+.landing-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  min-height: 100vh; /* Ensure it takes at least the full viewport height */
+  background-color: #f4f7fc;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.landing-header {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically by default */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+}
+
+.logo {
+  display: flex;
+  justify-content: center; /* Center the logo */
+  margin-bottom: 20px; /* Add space below the logo */
+}
+
+.logo-image {
+  max-height: 200px; /* Adjust maximum height for responsiveness */
+  width: auto;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center text and buttons */
+  justify-content: center; /* Center vertically */
+  text-align: center; /* Center the text within the container */
+}
+
+.title-text h1 {
+  font-size: 3rem; /* Adjust font size for smaller screens */
+  font-weight: bold;
+  margin: 0;
+}
+
+.title-blue {
+  color: #1FAAED;
+}
+
+.title-orange {
+  color: #F8A50D;
+}
+
+.title-text p {
+  font-size: 1rem;
+  color: #333;
+  max-width: 600px; /* Limit the width of the paragraph to improve alignment */
+  display: flex;
+}
+
+.title-text .subtitle {
+  font-size: 0.9rem;
+  color: black;
+}
+
+.buttons {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center; /* Ensure buttons are centered */
+}
+
+.buttons button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+  margin: 0 10px; /* Add space between buttons */
+  width: 160px; /* Set a fixed width for the buttons */
+}
+
+.login-button {
+  background-color: #1FAAED;
+  color: white;
+}
+
+.login-button:hover {
+  background-color: #1780C1;
+}
+
+.signup-button {
+  background-color: #F8A50D;
+  color: white;
+  border: 1px solid #F8A50D;
+}
+
+.signup-button:hover {
+  background-color: #D68B0A;
+}
+
+/* Media Query for larger screens (e.g., tablets and desktops) */
+@media (min-width: 768px) {
+  .landing-header {
+    flex-direction: row; /* Arrange logo and text in a row */
+    justify-content: space-between; /* Space them out */
+    align-items: center; /* Align vertically */
+    margin-top: 20px;
+  }
+
+  .logo {
+    margin-right: 30px; /* Add a gap between the logo and text */
+    margin-bottom: 0;
+  }
+
+  .logo-image {
+    max-height: 400px; /* Larger logo on bigger screens */
+  }
+
+  .title-container {
+    align-items: flex-start; /* Align text to the left on larger screens */
+    text-align: left;
+    margin-left: 0; /* Remove extra space on the left */
+  }
+
+  .title-text h1 {
+    font-size: 5rem; /* Larger title on bigger screens */
+    margin-bottom: 5px;
+  }
+
+  .title-text p {
+    font-size: 1.5rem; /* Larger paragraph on bigger screens */
+    margin-bottom: 10px;
+    max-width: 800px; /* Increase max width of the paragraph on larger screens */
+  }
+
+  .title-text .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .buttons {
+    margin-top: 10px;
+  }
+
+  .buttons button {
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 25px;
+    margin: 0 10px;
+  }
+}
